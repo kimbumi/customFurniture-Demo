@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kimbumi.github.io/three/customFurnitureDemo/">
+    <meta property="og:title" content="3D custom Furniture shop - Demo">
+    <meta property="og:image" content="https://kimbumi.github.io/three/customFurnitureDemo/og.jpg">
+    <meta property="og:description" content="Web dev project by Bumi Kim">
+    <meta property="og:site_name" content="Bumi Kim">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <title>Custom Furniture - Demo</title>
+    <link rel="shortcut icon" type="image/png" href="https://kimbumi.github.io/three/customFurnitureDemo/fav.png"/>
+
+</head>
+<body>
+    <div class="loading">
+        <div class="loader"></div>
+        <div>Loading</div>
+    </div>
+    <main>
+    <div class="flex">
+        <div class="canvasContainer">
+            <div class="icon">
+                <svg id="_x31_px" enable-background="new 0 0 16 16" height="32" viewBox="0 0 24 24" width="32" xmlns="http://www.w3.org/2000/svg"><path d="m12 7c-.061 0-.122-.011-.18-.033l-6.5-2.5c-.193-.074-.32-.26-.32-.467s.127-.393.32-.467l6.5-2.5c.116-.044.243-.044.359 0l6.5 2.5c.194.074.321.26.321.467s-.127.393-.32.467l-6.5 2.5c-.058.022-.119.033-.18.033zm-5.107-3 5.107 1.964 5.107-1.964-5.107-1.964z"/><path d="m12 15c-.061 0-.122-.011-.18-.033l-6.5-2.5c-.193-.074-.32-.26-.32-.467v-8c0-.276.224-.5.5-.5s.5.224.5.5v7.657l6 2.308 6-2.308v-7.657c0-.276.224-.5.5-.5s.5.224.5.5v8c0 .207-.127.393-.32.467l-6.5 2.5c-.058.022-.119.033-.18.033z"/><path d="m12 15c-.276 0-.5-.224-.5-.5v-8c0-.276.224-.5.5-.5s.5.224.5.5v8c0 .276-.224.5-.5.5z"/><path d="m10.5 22c-.152 0-.302-.069-.4-.2-.166-.221-.121-.534.1-.7l1.466-1.1-1.466-1.1c-.221-.166-.266-.479-.1-.7s.479-.265.7-.1l2 1.5c.126.094.2.243.2.4s-.074.306-.2.4l-2 1.5c-.09.067-.195.1-.3.1z"/><path d="m12 20.5c-1.512 0-2.943-.072-4.254-.213-1.814-.183-7.746-.961-7.746-3.287 0-.949.979-1.742 2.908-2.356.317-.098.657.149.657.477 0 .242-.168.444-.396.49-1.6.515-2.169 1.07-2.169 1.389 0 .666 2.125 1.816 6.85 2.292 1.278.138 2.673.208 4.15.208.276 0 .5.224.5.5s-.224.5-.5.5z"/><path d="m15.49 20.35c-.258 0-.477-.198-.498-.459-.022-.275.183-.517.458-.539 5.15-.421 7.55-1.652 7.55-2.352 0-.322-.579-.883-2.212-1.403-.263-.084-.408-.365-.325-.628.084-.263.364-.408.628-.325 1.93.614 2.909 1.407 2.909 2.356 0 2.465-6.482 3.186-8.469 3.349-.014.001-.028.001-.041.001z"/></svg></div>
+            <canvas class="webgl"></canvas>
+        </div>
+        <div class="detailContainer">
+            <h6 class="name">Classic couch 601</h6>
+            <div class="switches">
+                <a><div class="switch --is-active" data-option="sofa">Couch Material</div></a>
+                <a><div class="switch" data-option="cushion">Cushion Material</div></a>
+            </div>
+            <div class="paletteWrapper">
+                <div id="js-palette" class="palette">
+                </div>
+                <div id="js-palette-cushion" class="palette">
+                </div>
+            </div>
+           
+            <div class="Info">
+                <div>Couch Material</div>
+                <div class="js-couch-info"></div>
+            </div>
+            <div class="Info">
+                <div>Cushion Material</div>
+                <div class="js-cushion-info"></div>
+            </div>
+            <div class="hr"></div>
+            <div class="total">
+                <div>Total</div>
+                <div class="js-price price">000</div>
+            </div>
+
+            <a><div class="cta">Add to cart</div></a>
+        </div>
+    </div>
+</main>
+<script>
+    //LoadingManager
+    const jsLoader = document.querySelector('.loading')
+    const Main = document.querySelector('main')
+    Main.style.display = 'none'
+
+    document.addEventListener("DOMContentLoaded", () => {
+        Main.style.display = 'block'
+    });
+</script>
+</body>
+</html>
